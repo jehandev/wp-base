@@ -39,7 +39,8 @@
     "roots/wordpress": "5.6.1",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "wpackagist-plugin/wordpress-seo": "^15.9"
+    "wpackagist-plugin/wordpress-seo": "^15.9",
+    "wpackagist-plugin/ewww-image-optimizer": "^6.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",
