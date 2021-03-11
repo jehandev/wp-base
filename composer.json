@@ -42,7 +42,8 @@
     "wpackagist-plugin/wordpress-seo": "^15.9",
     "wpackagist-plugin/ewww-image-optimizer": "^6.0",
     "wpackagist-plugin/wp-mail-smtp": "^2.6",
-    "wpackagist-plugin/wordfence": "^7.4"
+    "wpackagist-plugin/wordfence": "^7.4",
+    "wpackagist-plugin/contact-form-7": "^5.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",
