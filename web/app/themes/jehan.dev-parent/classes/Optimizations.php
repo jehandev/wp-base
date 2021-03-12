@@ -34,6 +34,9 @@ class Optimizations {
         // Remove jQuery Migrate
         add_filter( 'wp_default_scripts', [$this, 'RemoveJqueryMigrate'] );
 
+        // Allow SVG Uploads
+        add_filter('upload_mimes', [$this, 'AllowSvgUploads']);
+
 
     }
 
@@ -220,6 +223,19 @@ class Optimizations {
 
         // WordFence
         remove_meta_box('wordfence_activity_report_widget', 'dashboard', 'normal');
-    } 
+    }
+
+    ##############################
+    #
+    # Allow SVG Uploads
+    #
+    ##############################
+    function AllowSvgUploads( $mimes ) {
+
+        $mimes['svg']  = 'image/svg+xml';
+        $mimes['svgz'] = 'image/svg+xml';
+        
+        return $mimes;
+      }
 
 }
