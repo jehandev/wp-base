@@ -94,8 +94,8 @@
     "autoload": {
         "psr-4": {
             "JehanDev\\": [
-                "web/themes/jehan.dev-parent/classes",
-                "web/themes/jehan.dev-child/classes"
+                "web/app/themes/jehan.dev-parent/classes",
+                "web/app/themes/jehan.dev-child/classes"
             ]
         }
     }
