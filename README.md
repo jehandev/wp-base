@@ -26,6 +26,9 @@
 - Supports : `post-thumbnails`, `html5`, `custom-logo`, `responsive-embeds`
 - Text domain for translations : `jehandev`
 
+### Helpers
+- Use [jjgrainger/posttypes](https://posttypes.jjgrainger.co.uk/) for easy OOP Custom Post Types creation without plugin
+
 ### Plugins :
 - Contact Form 7
 - Ewww Image Optimizer
