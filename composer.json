@@ -74,4 +74,12 @@
         "phpcs"
         ]
     },
+    "autoload": {
+        "psr-4": {
+            "JehanDev\\": [
+                "web/themes/jehan.dev-parent/classes",
+                "web/themes/jehan.dev-child/classes"
+            ]
+        }
+    }
 }
