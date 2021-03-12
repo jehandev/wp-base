@@ -63,7 +63,10 @@ class Optimizations {
         remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
     
         // filter to remove TinyMCE emojis
-        add_filter( 'tiny_mce_plugins', array( $this, 'DisableWordPressEmojiconsTinyMCE') );
+        add_filter( 'tiny_mce_plugins', [$this, 'DisableWordPressEmojiconsTinyMCE'] );
+
+        // Remove Dashboard Widgets 
+        add_action( 'wp_dashboard_setup', [$this, 'RemoveDashboardWidgets'] );
     
     }
 
@@ -195,5 +198,28 @@ class Optimizations {
             endif;
         endif;
     }
+
+    ##############################
+    #
+    # Remove Dashboard Widgets (WP Core + Plugins Pre-Installed with wp-base)
+    #
+    ##############################
+
+    public function RemoveDashboardWidgets() {
+
+        // Welcome Panel
+        remove_action( 'welcome_panel', 'wp_welcome_panel' );
+
+        // Core
+        remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
+
+        // Yoast
+        remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'side' );
+
+        // WordFence
+        remove_meta_box('wordfence_activity_report_widget', 'dashboard', 'normal');
+    } 
 
 }

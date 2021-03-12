@@ -13,6 +13,7 @@
 - Disable Comments
 - Disable email verification
 - Remove jQuery Migrate
+- Remove Core, Yoast and WordFence dashboard widgets
 
 ### Security
 - Remove Pingback
