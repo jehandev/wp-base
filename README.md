@@ -12,6 +12,12 @@
 - Disable email verification
 - Remove jQuery Migrate
 
+### Security
+- Remove Pingback
+- Disable XML-RPC
+- Hide WordPress Version
+- Remove Unnecessary Header Infos
+
 ### Plugins :
 - Contact Form 7
 - Ewww Image Optimizer
