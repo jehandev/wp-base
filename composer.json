@@ -72,7 +72,8 @@
             "composer run remove-old-wp-themes"
         ],
         "post-update-cmd": [
-            "composer run remove-old-wp-themes"
+            "composer run remove-old-wp-themes",
+            "wp core update-db"
         ],
         "test": [
             "phpcs"
