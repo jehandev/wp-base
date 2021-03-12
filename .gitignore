@@ -24,3 +24,4 @@ web/.htaccess
 # WP-CLI
 wp-cli.local.yml
 .vscode
+web/app/wflogs
