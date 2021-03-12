@@ -68,10 +68,27 @@
     },
     "scripts": {
         "post-root-package-install": [
-            "php -r \"copy('.env.example', '.env');\""
+            "php -r \"copy('.env.example', '.env');\"",
+            "composer run remove-old-wp-themes"
+        ],
+        "post-update-cmd": [
+            "composer run remove-old-wp-themes"
         ],
         "test": [
             "phpcs"
+        ],
+        "remove-old-wp-themes": [
+            "rm -rf web/wp/wp-content/themes/twentyten",
+            "rm -rf web/wp/wp-content/themes/twentyeleven",
+            "rm -rf web/wp/wp-content/themes/twentytwelve",
+            "rm -rf web/wp/wp-content/themes/twentythirteen",
+            "rm -rf web/wp/wp-content/themes/twentyfourteen",
+            "rm -rf web/wp/wp-content/themes/twentyfifteen",
+            "rm -rf web/wp/wp-content/themes/twentysixteen",
+            "rm -rf web/wp/wp-content/themes/twentyseventeen",
+            "rm -rf web/wp/wp-content/themes/twentynineteen",
+            "rm -rf web/wp/wp-content/themes/twentytwenty",
+            "rm -rf web/wp/wp-content/themes/twentytwentyone"
         ]
     },
     "autoload": {
