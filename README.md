@@ -18,6 +18,10 @@
 - Hide WordPress Version
 - Remove Unnecessary Header Infos
 
+## Theme Settings
+- Supports : post-thumbnails, html5, custom-logo, responsive-embeds
+- Text domain for translations : jehandev
+
 ### Plugins :
 - Contact Form 7
 - Ewww Image Optimizer
