@@ -29,6 +29,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
-    "postcss-combine-duplicated-selectors": "^10.0.2"
+    "postcss-combine-duplicated-selectors": "^10.0.2",
+    "postcss-import": "^14.0.0"
   }
 }
