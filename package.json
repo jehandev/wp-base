@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jehandev/wp-base/issues"
   },
-  "homepage": "https://github.com/jehandev/wp-base#readme"
+  "homepage": "https://github.com/jehandev/wp-base#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
 }
