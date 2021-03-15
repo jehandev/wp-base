@@ -26,3 +26,4 @@ wp-cli.local.yml
 .vscode
 web/app/wflogs
 web/app/db.php
+node_modules
