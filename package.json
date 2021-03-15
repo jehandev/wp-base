@@ -1,0 +1,19 @@
+{
+  "name": "wp-base",
+  "version": "1.0.0",
+  "description": "WordPress Base",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jehandev/wp-base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jehandev/wp-base/issues"
+  },
+  "homepage": "https://github.com/jehandev/wp-base#readme"
+}
