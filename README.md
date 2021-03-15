@@ -16,6 +16,7 @@
 - Remove jQuery Migrate
 - Remove Core, Yoast and WordFence dashboard widgets
 - Allow SVG Uploads
+- Remove Contact Form 7 scripts and styles if no CF7 shortcode in the content
 
 ### Security
 - Remove Pingback

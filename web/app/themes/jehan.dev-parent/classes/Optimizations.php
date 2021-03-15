@@ -37,6 +37,9 @@ class Optimizations {
         // Allow SVG Uploads
         add_filter('upload_mimes', [$this, 'AllowSvgUploads']);
 
+        // Remove Contact Form 7 scripts and styles if no shortcode in the page 
+        add_action( 'wp_enqueue_scripts', [$this, 'RemoveContactForm7Scripts']);
+
 
     }
 
@@ -236,6 +239,23 @@ class Optimizations {
         $mimes['svgz'] = 'image/svg+xml';
         
         return $mimes;
-      }
+    }
+    
+    ##############################
+    #
+    # Remove Contact Form 7 scripts and styles if no shortcode
+    #
+    ##############################
+    public function RemoveContactForm7Scripts() {
+	    global $post;
+
+	    if( has_shortcode( $post->post_content, 'contact-form-7') ) :
+	        wp_enqueue_script('contact-form-7');
+	        wp_enqueue_style('contact-form-7');
+	    else :
+	        wp_dequeue_script('contact-form-7');
+	        wp_dequeue_style('contact-form-7');
+        endif;
+	}
 
 }
