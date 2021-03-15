@@ -30,6 +30,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
+    "minireset.css": "^0.0.7",
     "postcss-combine-duplicated-selectors": "^10.0.2",
     "postcss-import": "^14.0.0",
     "postcss-math": "^0.0.10",
