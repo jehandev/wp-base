@@ -4,6 +4,7 @@
 
 ### Base
 - Bedrock
+- Timber (Twig)
 
 ### Optimizations
 - Remove WordPress Emojicons
