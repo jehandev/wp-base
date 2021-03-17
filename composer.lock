@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3f7f2f4a9fa9cae6f166a1d8a22e2f2",
+    "content-hash": "e492b75115766ce2d841e877a094ba1d",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1436,15 +1436,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "15.9.2",
+            "version": "16.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/15.9.2"
+                "reference": "tags/16.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.9.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.0.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
