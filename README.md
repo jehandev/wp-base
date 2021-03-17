@@ -55,3 +55,47 @@
 - WP Mail SMTP
 - WPS Hide Login
 - Yoast SEO
+
+### Linters
+
+These linters are applied when processing files with Gulp.
+
+#### Stylelint Rules
+
+Generated with [Stylelint Config Generator](https://maximgatilin.github.io/stylelint-config/)
+
+```
+"indentation": 4,
+"string-quotes": "single",
+"no-duplicate-selectors": true,
+"color-hex-case": "lower",
+"color-hex-length": "long",
+"color-named": "never",
+"selector-no-qualifying-type": true,
+"selector-combinator-space-after": "always",
+"selector-attribute-quotes": "always",
+"selector-attribute-operator-space-before": "never",
+"selector-attribute-operator-space-after": "never",
+"selector-attribute-brackets-space-inside": "never",
+"declaration-block-trailing-semicolon": "never",
+"declaration-colon-space-before": "never",
+"declaration-colon-space-after": "always",
+"property-no-vendor-prefix": true,
+"value-no-vendor-prefix": true,
+"number-leading-zero": "always",
+"function-url-quotes": "never",
+"font-weight-notation": "numeric",
+"font-family-name-quotes": "always-where-recommended",
+"comment-whitespace-inside": "always",
+"comment-empty-line-before": "always",
+"at-rule-no-vendor-prefix": true,
+"rule-empty-line-before": "always",
+"selector-pseudo-element-colon-notation": "double",
+"selector-pseudo-class-parentheses-space-inside": "never",
+"selector-no-vendor-prefix": true,
+"media-feature-range-operator-space-before": "always",
+"media-feature-range-operator-space-after": "always",
+"media-feature-parentheses-space-inside": "never",
+"media-feature-colon-space-before": "never",
+"media-feature-colon-space-after": "always"
+```
