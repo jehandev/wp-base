@@ -1,0 +1,14 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules" : {
+        "camelcase": 1,
+        "comma-dangle": 2,
+        "quotes": 0
+    }
+}
