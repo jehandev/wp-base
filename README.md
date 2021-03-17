@@ -62,6 +62,27 @@
 
 These linters are applied when processing files with Gulp.
 
+#### Eslint Rules
+
+`@help-needed : probably far from being perfect and way too permissive I think`
+
+```
+{
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules" : {
+        "camelcase": 1,
+        "comma-dangle": 2,
+        "quotes": 0
+    }
+}
+```
+
 #### Stylelint Rules
 
 Generated with [Stylelint Config Generator](https://maximgatilin.github.io/stylelint-config/)
