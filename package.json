@@ -28,6 +28,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-stylelint": "^13.0.0",
+    "gulp-tap": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "minireset.css": "^0.0.7",
     "postcss-combine-duplicated-selectors": "^10.0.2",
