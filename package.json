@@ -33,9 +33,7 @@
     "postcss-combine-duplicated-selectors": "^10.0.2",
     "postcss-import": "^14.0.0",
     "postcss-math": "^0.0.10",
-    "precss": "^4.0.0"
-  },
-  "devDependencies": {
+    "precss": "^4.0.0",
     "stylelint-config-standard": "^21.0.0"
   }
 }
