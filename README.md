@@ -62,15 +62,15 @@
 ### Task Runner : Gulp
 
 `gulp js`   
-Lint and minify every `*.js` files in the `web/app/themes/jehan.dev-parent/assets/build/js/frontend` and `web/app/themes/jehan.dev-parent/assets/build/js/backend` folders.  
-Folder structure is preserved, and everything is sent to `web/app/themes/jehan.dev-parent/assets/dist/js`
+Lint and minify every `*.js` files in the `web/app/themes/wp-base-parent/assets/build/js/frontend` and `web/app/themes/wp-base-parent/assets/build/js/backend` folders.  
+Folder structure is preserved, and everything is sent to `web/app/themes/wp-base-parent/assets/dist/js`
 
 `gulp postcss`   
-Lint and minify every `*.postcss` files in the `web/app/themes/jehan.dev-parent/assets/build/postcss` folder.  
-Folder structure is preserved, and everything is sent to `web/app/themes/jehan.dev-parent/assets/dist/css`
+Lint and minify every `*.postcss` files in the `web/app/themes/wp-base-parent/assets/build/postcss` folder.  
+Folder structure is preserved, and everything is sent to `web/app/themes/wp-base-parent/assets/dist/css`
 
 `gulp images`  
-Minify every file in `web/app/themes/jehan.dev-parent/assets/build/images`.  
+Minify every file in `web/app/themes/wp-base-parent/assets/build/images`.  
 Folder structure is preserved
 
 `gulp all` : Perform the three tasks above at once.
