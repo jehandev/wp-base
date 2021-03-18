@@ -23,7 +23,10 @@ web/.htaccess
 
 # WP-CLI
 wp-cli.local.yml
-.vscode
 web/app/wflogs
 web/app/db.php
 node_modules
+
+# Various
+.vscode
+.DS_Store
