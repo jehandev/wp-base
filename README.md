@@ -44,7 +44,7 @@
 
 ### Theme Settings
 - Supports : `post-thumbnails`, `html5`, `custom-logo`, `responsive-embeds`
-- Text domain for translations : `jehandev`
+- Text domain for translations : `wpbase`
 
 ### Helpers
 - Use [jjgrainger/posttypes](https://posttypes.jjgrainger.co.uk/) for easy OOP Custom Post Types creation without plugin
