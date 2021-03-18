@@ -2,8 +2,9 @@
 
 ## Installation
 
-1. composer install
-2. Enter Variables in `.env`
+1. At the root of the project : `composer install`
+2. At the root of the project : `npm install`
+3. Enter Variables in `.env`
   - `DB_NAME`
   - `DB_USER`
   - `DB_PASSWORD`
@@ -11,9 +12,9 @@
   - `WP_ENV` (`development`, `staging` or `production`)
   - `WP_HOME`
   - `WP_SITEURL`
-3. Generate Salts with [Roots App](https://roots.io/salts.html) and copy/paste them in `.env`
-4. Activate all Plugins : `wp plugin activate --all`
-5. Remove every default posts, comments, pages : `wp site empty`
+4. Generate Salts with [Roots App](https://roots.io/salts.html) and copy/paste them in `.env`
+5. Activate all Plugins : `wp plugin activate --all`
+6. Remove every default posts, comments, pages : `wp site empty`
 
 ## Features
 
