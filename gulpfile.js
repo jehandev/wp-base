@@ -1,11 +1,11 @@
 "use strict";
 
-const   public_css_folder       = 'web/app/themes/wp-base-parent/assets/dist/css/',
-        public_images_folder    = 'web/app/themes/wp-base-parent/assets/dist/images/',
-        public_js_folder        = 'web/app/themes/wp-base-parent/assets/dist/js/',
-        postcss_folder          = 'web/app/themes/wp-base-parent/assets/build/postcss/',
-        js_folder               = 'web/app/themes/wp-base-parent/assets/build/js/',
-        images_folder           = 'web/app/themes/wp-base-parent/assets/build/images/'
+const   public_css_folder       = 'web/app/themes/wp-base/assets/dist/css/',
+        public_images_folder    = 'web/app/themes/wp-base/assets/dist/images/',
+        public_js_folder        = 'web/app/themes/wp-base/assets/dist/js/',
+        postcss_folder          = 'web/app/themes/wp-base/assets/build/postcss/',
+        js_folder               = 'web/app/themes/wp-base/assets/build/js/',
+        images_folder           = 'web/app/themes/wp-base/assets/build/images/'
 ;
 
 const   gulp                    = require('gulp'),
