@@ -32,7 +32,7 @@
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^7.1.0",
+    "imagemin-svgo": "^9.0.0",
     "minireset.css": "^0.0.7",
     "postcss-combine-duplicated-selectors": "^10.0.2",
     "postcss-import": "^14.0.0",
