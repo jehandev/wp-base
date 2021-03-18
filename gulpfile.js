@@ -1,9 +1,11 @@
 "use strict";
 
 const   public_css_folder       = 'web/app/themes/jehan.dev-parent/assets/dist/css/',
+        public_images_folder    = 'web/app/themes/jehan.dev-parent/assets/dist/images/',
         public_js_folder        = 'web/app/themes/jehan.dev-parent/assets/dist/js/',
         postcss_folder          = 'web/app/themes/jehan.dev-parent/assets/build/postcss/',
         js_folder               = 'web/app/themes/jehan.dev-parent/assets/build/js/',
+        images_folder           = 'web/app/themes/jehan.dev-parent/assets/build/images/',
 ;
 
 const   gulp                    = require('gulp'),
@@ -137,13 +139,21 @@ function js() {
 
 }
 
+function images() {
+    return gulp.src(images_folder + '**/*')
+        .pipe(gulp_imagemin())
+        .pipe(gulp.dest(public_images_folder))
+    ;
+}
 
 function assetWatch() {
 
     gulp.watch( '**/*.postcss', { cwd: postcss_folder }, gulp.series(stylesLint, stylesCompile, stylesMinify));
     gulp.watch( '**/*.js', { cwd: js_folder }, gulp.series(js));
+    gulp.watch( '**/*.*', { cwd: images_folder }, gulp.series(images));
 
 }
 
 gulp.task('postcss', gulp.series(stylesLint, stylesCompile, stylesMinify));
 gulp.task('js', gulp.series(js));
+gulp.task('images', images);
