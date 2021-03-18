@@ -1,6 +1,6 @@
 <?php
 
-namespace JehanDev;
+namespace WPBase;
 
 class Optimizations {
 

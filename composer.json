@@ -86,7 +86,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JehanDev\\": [
+            "WPBase\\": [
                 "web/app/themes/wp-base/classes",
                 "web/app/themes/wp-base-child/classes"
             ]

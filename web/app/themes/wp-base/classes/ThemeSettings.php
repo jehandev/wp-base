@@ -1,6 +1,6 @@
 <?php
 
-namespace JehanDev;
+namespace WPBase;
 
 class ThemeSettings {
 
@@ -24,7 +24,7 @@ class ThemeSettings {
     ##############################
 
     public function ThemeTranslations(){
-        load_theme_textdomain( 'jehandev', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'wpbase', get_template_directory() . '/languages' );
     }
 
 }
