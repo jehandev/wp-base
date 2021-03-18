@@ -158,3 +158,5 @@ function assetWatch() {
 gulp.task('postcss', gulp.series(stylesLint, stylesCompile, stylesMinify));
 gulp.task('js', gulp.series(js));
 gulp.task('images', images);
+gulp.task('all', gulp.series('postcss', 'js', 'images'));
+gulp.task('watch', gulp.series('postcss', 'js', 'images', assetWatch));
