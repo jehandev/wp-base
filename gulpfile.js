@@ -5,7 +5,7 @@ const   public_css_folder       = 'web/app/themes/jehan.dev-parent/assets/dist/c
         public_js_folder        = 'web/app/themes/jehan.dev-parent/assets/dist/js/',
         postcss_folder          = 'web/app/themes/jehan.dev-parent/assets/build/postcss/',
         js_folder               = 'web/app/themes/jehan.dev-parent/assets/build/js/',
-        images_folder           = 'web/app/themes/jehan.dev-parent/assets/build/images/',
+        images_folder           = 'web/app/themes/jehan.dev-parent/assets/build/images/'
 ;
 
 const   gulp                    = require('gulp'),
