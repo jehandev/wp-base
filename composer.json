@@ -48,7 +48,7 @@
         "wpackagist-plugin/wps-hide-login": "^1.8",
         "wpackagist-plugin/query-monitor": "^3.6",
         "jjgrainger/posttypes": "^2.1",
-        "timber/timber": "^1.18"
+        "timber/timber": "^1.19"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5.8",
