@@ -39,7 +39,7 @@
         "roots/wordpress": "^5.7",
         "roots/wp-config": "1.0.0",
         "roots/wp-password-bcrypt": "1.0.0",
-        "wpackagist-plugin/wordpress-seo": "^16.0",
+        "wpackagist-plugin/wordpress-seo": "^17.0",
         "wpackagist-plugin/ewww-image-optimizer": "^6.0",
         "wpackagist-plugin/wp-mail-smtp": "^2.6",
         "wpackagist-plugin/wordfence": "^7.4",
