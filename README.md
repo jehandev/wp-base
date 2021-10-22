@@ -59,23 +59,9 @@
 - WPS Hide Login
 - Yoast SEO
 
-### Task Runner : Gulp
+### Task Runner : Laravel Mix
 
-`gulp js`   
-Lint and minify every `*.js` files in the `web/app/themes/wp-base/assets/build/js/frontend` and `web/app/themes/wp-base/assets/build/js/backend` folders.  
-Folder structure is preserved, and everything is sent to `web/app/themes/wp-base/assets/dist/js`
-
-`gulp postcss`   
-Lint and minify every `*.postcss` files in the `web/app/themes/wp-base/assets/build/postcss` folder.  
-Folder structure is preserved, and everything is sent to `web/app/themes/wp-base/assets/dist/css`
-
-`gulp images`  
-Minify every file in `web/app/themes/wp-base/assets/build/images`.  
-Folder structure is preserved
-
-`gulp all` : Perform the three tasks above at once.
-
-`gulp watch` : Perform `gulp all` + watch changes.
+**[WIP]**  
 
 ### Linters
 
