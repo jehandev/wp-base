@@ -1481,15 +1481,15 @@
         },
         {
             "name": "wpackagist-plugin/wps-hide-login",
-            "version": "1.8.6",
+            "version": "1.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wps-hide-login/",
-                "reference": "tags/1.8.6"
+                "reference": "tags/1.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wps-hide-login.1.8.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/wps-hide-login.1.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
