@@ -30,3 +30,7 @@ node_modules
 # Various
 .vscode
 .DS_Store
+
+# Compiled assets
+web/app/themes/wp-base-child/assets/dist
+web/app/ewww

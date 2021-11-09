@@ -38,7 +38,7 @@
         "roots/bedrock-autoloader": "^1.0",
         "roots/wordpress": "^5.7",
         "roots/wp-config": "1.0.0",
-        "roots/wp-password-bcrypt": "1.0.0",
+        "roots/wp-password-bcrypt": "1.1.0",
         "wpackagist-plugin/wordpress-seo": "^17.0",
         "wpackagist-plugin/ewww-image-optimizer": "^6.0",
         "wpackagist-plugin/wp-mail-smtp": "^3.0",
