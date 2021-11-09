@@ -33,3 +33,4 @@ node_modules
 
 # Compiled assets
 web/app/themes/wp-base-child/assets/dist
+web/app/ewww
