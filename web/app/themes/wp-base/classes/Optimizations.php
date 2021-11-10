@@ -40,6 +40,8 @@ class Optimizations {
         // Remove Contact Form 7 scripts and styles if no shortcode in the page 
         add_action( 'wp_enqueue_scripts', [$this, 'RemoveContactForm7Scripts']);
 
+        // Remove Dashicons on frontend if user is not admin
+        add_action( 'wp_enqueue_scripts', [$this, 'RemoveDashicons'] );
 
     }
 
@@ -257,5 +259,17 @@ class Optimizations {
 	        wp_dequeue_style('contact-form-7');
         endif;
 	}
+
+    ##############################
+    #
+    # Remove Dashicons on frontend for non-admin visitors
+    #
+    ##############################
+    public function RemoveDashicons() {
+        if (current_user_can( 'update_core' )) {
+            return;
+        }
+        wp_deregister_style('dashicons');
+    }
 
 }
