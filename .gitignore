@@ -31,6 +31,7 @@ node_modules
 # Various
 .vscode
 .DS_Store
+.idea
 
 # Compiled assets
 web/app/themes/wp-base-child/assets/dist
