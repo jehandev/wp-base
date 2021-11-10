@@ -251,7 +251,7 @@ class Optimizations {
     public function RemoveContactForm7Scripts() {
 	    global $post;
 
-	    if( has_shortcode( $post->post_content, 'contact-form-7') ) :
+	    if( is_object($post) && has_shortcode( $post->post_content, 'contact-form-7') ) :
 	        wp_enqueue_script('contact-form-7');
 	        wp_enqueue_style('contact-form-7');
 	    else :
