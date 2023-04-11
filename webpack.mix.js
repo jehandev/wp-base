@@ -11,47 +11,52 @@ mix.webpackConfig({
     plugins: [
         new CopyPlugin({
             patterns: [
-              {
-                from: buildChild + "images",
-                to: './images',
-              },
+                {
+                    from: buildChild + "images",
+                    to: './images',
+                },
+                {
+                    from: buildChild + "fonts",
+                    to: './fonts',
+                },
             ],
-          }),
-          new ImageMinimizerPlugin({
-            test: /\.(jpe?g|png)$/i,
-            filename: "[path][name].webp",
-            minimizerOptions: {
-              plugins: [
-                    ["imagemin-webp"],
-                    ["imagemin-gifsicle", { interlaced: true }],
-                    ["imagemin-jpegtran", { progressive: true }],
-                    ["imagemin-optipng", { optimizationLevel: 5 }],
-                    // Svgo configuration here https://github.com/svg/svgo#configuration
-                    [
-                        "imagemin-svgo",
-                        {
-                            plugins: [
-                                {
-                                    name: 'preset-default',
-                                    params: {
-                                        overrides: {
-                                            removeViewBox: {
-                                                active: false
-                                            },
-                                            addAttributesToSVGElement: {
-                                                params: {
-                                                    attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            ],
-                        },
+        }),
+        new ImageMinimizerPlugin({
+            minimizer: {
+                implementation: ImageMinimizerPlugin.imageminMinify,
+                options: {
+                    plugins: [
+                        "imagemin-gifsicle",
+                        "imagemin-mozjpeg",
+                        "imagemin-pngquant",
+                        "imagemin-svgo"
                     ],
-                ],
+                }
             },
-          }),
+            generator: [
+                {
+                    // You can apply generator using `?as=webp`, you can use any name and provide more options
+                    preset: "webp",
+                    implementation: ImageMinimizerPlugin.imageminGenerate,
+                    options: {
+                        plugins: ["imagemin-webp"],
+                    },
+                },
+                {
+                    preset: "name",
+                    filename: "generated-[name][ext]",
+                    implementation: ImageMinimizerPlugin.squooshMinify,
+                    // Options
+                    options: {
+                        encodeOptions: {
+                            mozjpeg: {
+                                quality: 90,
+                            },
+                        },
+                    },
+                },
+            ],
+        }),
     ]
 });
 
@@ -68,11 +73,10 @@ mix.options({
     ]
 });
 
-// Example JS
-// mix.babel([buildChild + 'js/frontend/*.js'], 'js/frontend.js')
+// Don't really know why setPublicPath is not working here
+mix.babel([buildChild + 'js/frontend/*.js'], distChild + 'js/frontend.js').minify(distChild + 'js/frontend.js')
 
-// Example CSS
-// mix.postCss(buildChild + 'postcss/frontend.pcss', 'css/frontend.css');
+mix.postCss(buildChild + 'postcss/frontend.pcss', 'css/frontend.css').minify(distChild + 'css/frontend.css');
 
 mix.sourceMaps()
-   .version();
+    .version();
