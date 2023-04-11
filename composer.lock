@@ -280,16 +280,16 @@
         },
         {
             "name": "jjgrainger/posttypes",
-            "version": "2.1",
+            "version": "v2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jjgrainger/PostTypes.git",
-                "reference": "a87584606e9ef726f7621c1d71a184fdf7282172"
+                "reference": "20f5a203316783a71ddfcd047ffebf1dc2bacb51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jjgrainger/PostTypes/zipball/a87584606e9ef726f7621c1d71a184fdf7282172",
-                "reference": "a87584606e9ef726f7621c1d71a184fdf7282172",
+                "url": "https://api.github.com/repos/jjgrainger/PostTypes/zipball/20f5a203316783a71ddfcd047ffebf1dc2bacb51",
+                "reference": "20f5a203316783a71ddfcd047ffebf1dc2bacb51",
                 "shasum": ""
             },
             "require": {
@@ -312,17 +312,20 @@
             "authors": [
                 {
                     "name": "Joe Grainger",
-                    "email": "hello@jjgrainger.co.uk",
                     "homepage": "https://jjgrainger.co.uk"
                 }
             ],
             "description": "Simple WordPress custom post types.",
-            "homepage": "https://github.com/jjgrainger/posttype",
+            "homepage": "https://posttypes.jjgrainger.co.uk",
+            "keywords": [
+                "post-types",
+                "wordpress"
+            ],
             "support": {
-                "issues": "https://github.com/jjgrainger/PostTypes/issues",
-                "source": "https://github.com/jjgrainger/PostTypes/tree/v2.1"
+                "issues": "https://github.com/jjgrainger/posttypes/issues",
+                "source": "https://github.com/jjgrainger/posttypes"
             },
-            "time": "2020-04-12T13:01:12+00:00"
+            "time": "2022-05-21T14:15:12+00:00"
         },
         {
             "name": "oscarotero/env",
