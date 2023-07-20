@@ -31,7 +31,7 @@
         }
     ],
     "require": {
-        "php": ">=7.1",
+        "php": ">=8.0",
         "composer/installers": "^1.10",
         "vlucas/phpdotenv": "^5.3",
         "oscarotero/env": "^2.1",
@@ -40,7 +40,7 @@
         "roots/wp-config": "1.0.0",
         "roots/wp-password-bcrypt": "1.1.0",
         "wpackagist-plugin/wordpress-seo": "^20.0",
-        "wpackagist-plugin/ewww-image-optimizer": "^6.0",
+        "wpackagist-plugin/ewww-image-optimizer": "^7.0",
         "wpackagist-plugin/wp-mail-smtp": "^3.0",
         "wpackagist-plugin/wordfence": "^7.4",
         "wpackagist-plugin/contact-form-7": "^5.4",
