@@ -15,7 +15,7 @@ class ThemeSettings
         add_theme_support('responsive-embeds');
 
         // Theme Translations
-        add_action('after_setup_theme', [$this, 'ThemeTranslations']);
+        add_action('after_setup_theme', [$this, 'themeTranslations']);
     }
 
     ##############################
@@ -24,7 +24,7 @@ class ThemeSettings
     #
     ##############################
 
-    public function ThemeTranslations()
+    public function themeTranslations(): void
     {
         load_theme_textdomain('wpbase', get_template_directory() . '/languages');
     }

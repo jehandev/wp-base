@@ -9,23 +9,23 @@ class Optimizations
     {
 
         // Remove WordPress Emojicons
-        add_action('init', array( $this, 'DisableWordPressEmojicons'));
+        add_action('init', array( $this, 'disableWordPressEmojicons'));
 
         // Disable Auto Paragraphs
-        add_filter('the_content', array( $this, 'DisableAutoParagraphs'), 0);
+        add_filter('the_content', array( $this, 'disableAutoParagraphs'), 0);
         add_filter('wpcf7_autop_or_not', '__return_false');
 
         // Add slug in body class
-        add_filter('body_class', array( $this, 'AddPageSlugInBodyClass'));
+        add_filter('body_class', array( $this, 'addPageSlugInBodyClass'));
 
         // Set Image Meta on Upload (Title / Description / Alt)
-        add_action('add_attachment', array( $this, 'SetImageMetaOnUpload'));
+        add_action('add_attachment', array( $this, 'setImageMetaOnUpload'));
 
         // Disable Comments
-        add_action('admin_init', [$this, 'DisableComments']);
-        add_action('admin_menu', [$this, 'RemoveCommentMenu']);
-        add_action('init', [$this, 'RemoveCommentLinkAdminBar']);
-        add_action('init', [$this, 'DeregisterCommentJS']);
+        add_action('admin_init', [$this, 'disableComments']);
+        add_action('admin_menu', [$this, 'removeCommentMenu']);
+        add_action('init', [$this, 'removeCommentLinkAdminBar']);
+        add_action('init', [$this, 'deregisterCommentJS']);
         add_filter('comments_open', '__return_false', 20, 2);
         add_filter('pings_open', '__return_false', 20, 2);
         add_filter('comments_array', '__return_empty_array', 10, 2);
@@ -34,16 +34,16 @@ class Optimizations
         add_filter('admin_email_check_interval', '__return_zero');
 
         // Remove jQuery Migrate
-        add_filter('wp_default_scripts', [$this, 'RemoveJqueryMigrate']);
+        add_filter('wp_default_scripts', [$this, 'removeJqueryMigrate']);
 
         // Allow SVG Uploads
-        add_filter('upload_mimes', [$this, 'AllowSvgUploads']);
+        add_filter('upload_mimes', [$this, 'allowSvgUploads']);
 
         // Remove Contact Form 7 scripts and styles if no shortcode in the page
-        add_action('wp_enqueue_scripts', [$this, 'RemoveContactForm7Scripts']);
+        add_action('wp_enqueue_scripts', [$this, 'removeContactForm7Scripts']);
 
         // Remove Dashicons on frontend if user is not admin
-        add_action('wp_enqueue_scripts', [$this, 'RemoveDashicons']);
+        add_action('wp_enqueue_scripts', [$this, 'removeDashicons']);
     }
 
     ##############################
@@ -51,8 +51,8 @@ class Optimizations
     # Remove WordPress Emojicons
     #
     ##############################
-    
-    public function DisableWordPressEmojiconsTinyMCE($plugins)
+
+    public function disableWordPressEmojiconsTinyMCE($plugins): array
     {
         if (is_array($plugins)) {
             return array_diff($plugins, array( 'wpemoji' ));
@@ -61,7 +61,7 @@ class Optimizations
         }
     }
 
-    public function DisableWordPressEmojicons()
+    public function disableWordPressEmojicons(): void
     {
 
         // all actions related to emojis
@@ -72,12 +72,12 @@ class Optimizations
         remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
         remove_filter('the_content_feed', 'wp_staticize_emoji');
         remove_filter('comment_text_rss', 'wp_staticize_emoji');
-    
+
         // filter to remove TinyMCE emojis
-        add_filter('tiny_mce_plugins', [$this, 'DisableWordPressEmojiconsTinyMCE']);
+        add_filter('tiny_mce_plugins', [$this, 'disableWordPressEmojiconsTinyMCE']);
 
         // Remove Dashboard Widgets
-        add_action('wp_dashboard_setup', [$this, 'RemoveDashboardWidgets']);
+        add_action('wp_dashboard_setup', [$this, 'removeDashboardWidgets']);
     }
 
     ##############################
@@ -86,7 +86,7 @@ class Optimizations
     #
     ##############################
 
-    function DisableAutoParagraphs($content)
+    public function disableAutoParagraphs($content)
     {
 
         if (is_singular('page')) {
@@ -102,7 +102,7 @@ class Optimizations
     #
     ##############################
 
-    public function AddPageSlugInBodyClass($classes)
+    public function addPageSlugInBodyClass($classes)
     {
 
         if (is_singular('page')) {
@@ -119,9 +119,9 @@ class Optimizations
     #
     ##############################
 
-    public function SetImageMetaOnUpload($post_ID)
+    public function setImageMetaOnUpload($post_ID): void
     {
-        
+
         if (wp_attachment_is_image($post_ID)) {
             $ImageTitle = get_post($post_ID)->post_title;
 
@@ -155,7 +155,7 @@ class Optimizations
     #
     ##############################
 
-    public function DisableComments()
+    public function disableComments(): void
     {
 
         global $pagenow;
@@ -177,19 +177,19 @@ class Optimizations
         }
     }
 
-    public function RemoveCommentMenu()
+    public function removeCommentMenu(): void
     {
         remove_menu_page('edit-comments.php');
     }
 
-    public function RemoveCommentLinkAdminBar()
+    public function removeCommentLinkAdminBar(): void
     {
         if (is_admin_bar_showing()) {
             remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
         }
     }
 
-    public function DeregisterCommentJS()
+    public function deregisterCommentJS(): void
     {
         wp_deregister_script('comment-reply');
     }
@@ -200,11 +200,11 @@ class Optimizations
     #
     ##############################
 
-    function RemoveJqueryMigrate($scripts)
+    public function removeJqueryMigrate($scripts): void
     {
         if (isset($scripts->registered['jquery'])) :
             $script = $scripts->registered['jquery'];
-                     
+
             if ($script->deps) :
                 $script->deps = array_diff($script->deps, array( 'jquery-migrate' ));
             endif;
@@ -217,7 +217,7 @@ class Optimizations
     #
     ##############################
 
-    public function RemoveDashboardWidgets()
+    public function removeDashboardWidgets(): void
     {
 
         // Welcome Panel
@@ -240,21 +240,21 @@ class Optimizations
     # Allow SVG Uploads
     #
     ##############################
-    function AllowSvgUploads($mimes)
+    public function allowSvgUploads($mimes)
     {
 
         $mimes['svg']  = 'image/svg+xml';
         $mimes['svgz'] = 'image/svg+xml';
-        
+
         return $mimes;
     }
-    
+
     ##############################
     #
     # Remove Contact Form 7 scripts and styles if no shortcode
     #
     ##############################
-    public function RemoveContactForm7Scripts()
+    public function removeContactForm7Scripts(): void
     {
         global $post;
 
@@ -272,7 +272,7 @@ class Optimizations
     # Remove Dashicons on frontend for non-admin visitors
     #
     ##############################
-    public function RemoveDashicons()
+    public function removeDashicons(): void
     {
         if (current_user_can('update_core')) {
             return;

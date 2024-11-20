@@ -9,19 +9,19 @@ class Security
     {
 
         // Disable Pingback
-        add_filter('wp_headers', array( $this, 'RemovePingback'));
+        add_filter('wp_headers', array( $this, 'removePingback'));
 
         // Disable XML-RPC
         add_filter('wp_xmlrpc_server_class', array( $this, '__return_false'));
         add_filter('xmlrpc_enabled', array( $this, '__return_false'));
 
         // Hide WordPress version
-        add_filter('the_generator', array( $this, 'HideWordPressVersion'));
-        add_filter('style_loader_src', array( $this, 'RemoveWordPressVersionSuffix'), 9999);
+        add_filter('the_generator', array( $this, 'hideWordPressVersion'));
+        add_filter('style_loader_src', array( $this, 'removeWordPressVersionSuffix'), 9999);
         add_filter('script_loader_src', array( $this, 'RemoveWordPressVersionSuffix'), 9999);
 
         // Remove unnecessary header infos
-        add_action('init', array( $this, 'RemoveHeaderInfo'));
+        add_action('init', array( $this, 'removeHeaderInfo'));
     }
 
     ##############################
@@ -30,25 +30,25 @@ class Security
     #
     ##############################
 
-    public function RemovePingback($headers)
+    public function removePingback($headers)
     {
         unset($headers['X-Pingback']);
         return $headers;
     }
 
-    
+
     ##############################
     #
     # Hide WordPress Version
     #
     ##############################
 
-    public function HideWordPressVersion()
+    public function hideWordPressVersion()
     {
         return '';
     }
 
-    public function RemoveWordPressVersionSuffix($src)
+    public function removeWordPressVersionSuffix($src)
     {
         if (strpos($src, 'ver=')) {
             $src = remove_query_arg('ver', $src);
@@ -62,7 +62,7 @@ class Security
     #
     ##############################
 
-    public function RemoveHeaderInfo()
+    public function removeHeaderInfo(): void
     {
         remove_action('wp_head', 'feed_links_extra', 3);
         remove_action('wp_head', 'rsd_link');
