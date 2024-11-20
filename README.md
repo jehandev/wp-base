@@ -4,7 +4,7 @@
 
 1. At the root of the project : `composer install`
 2. At the root of the project : `npm install`
-3. Copy `.env.example` to `.env` and enter your variables in this new file :
+3. Open a terminal and do a  `cp .env.example .env` and enter your variables in this new file :
   - `DB_NAME`
   - `DB_USER`
   - `DB_PASSWORD`
