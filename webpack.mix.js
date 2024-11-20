@@ -14,10 +14,12 @@ mix.webpackConfig({
                 {
                     from: buildChild + "images",
                     to: './images',
+                    noErrorOnMissing: true,
                 },
                 {
                     from: buildChild + "fonts",
                     to: './fonts',
+                    noErrorOnMissing: true,
                 },
             ],
         }),
