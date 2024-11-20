@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d4e95952ee618f6c59d851b08df6e44",
+    "content-hash": "00428b38cbb582d4dfcb40e2b9ff72dd",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1597,15 +1597,15 @@
         },
         {
             "name": "wpackagist-plugin/wordfence",
-            "version": "7.10.2",
+            "version": "8.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordfence/",
-                "reference": "tags/7.10.2"
+                "reference": "tags/8.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordfence.7.10.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordfence.8.0.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
