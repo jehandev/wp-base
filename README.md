@@ -2,9 +2,11 @@
 
 ## Installation
 
-1. At the root of the project : `composer install`
-2. At the root of the project : `npm install`
-3. Open a terminal and do a  `cp .env.example .env` and enter your variables in this new file :
+1. `git clone git@github.com:jehandev/wp-base.git`
+2. `cd` into the project
+3. `composer install`
+4. `npm install`
+5. `cp .env.example .env` and enter your variables in this new file :
   - `DB_NAME`
   - `DB_USER`
   - `DB_PASSWORD`
@@ -12,13 +14,9 @@
   - `WP_ENV` (`development`, `staging` or `production`)
   - `WP_HOME`
   - `WP_SITEURL`
-4. Generate Salts with [Roots App](https://roots.io/salts.html) and copy/paste them in `.env`
-5. Activate all Plugins : `wp plugin activate --all`
-6. Remove every default posts, comments, pages : `wp site empty`
-
-## Features
-
-`@Todo : providing a better way to import files from node_modules in css`
+6. Generate Salts with [Roots App](https://roots.io/salts.html) and copy/paste them in `.env`
+7. Activate all Plugins : `wp plugin activate --all`
+8. Remove every default posts, comments, pages : `wp site empty`
 
 ### Base
 - Bedrock
@@ -62,7 +60,18 @@
 
 ### Task Runner : Laravel Mix
 
-**[WIP]**  
+- Use `mix` or `mix watch` to compile assets for development
+- Use `mix --production` to compile assets for production
+
+#### Details & features
+`@Todo : providing a way to import files from node_modules in css`
+- PostCSS must be located in the `assets/postcss` of the `wp-base-child` folder
+- JavaScript must be located in the `assets/js` of the `wp-base-child` folder
+- Images are processed in the `assets/js` of the `wp-base-child` folder and optimized with `imagemin`, `imagemin-mozjpeg`, `imagemin-pngquant`, `imagemin-svgo`, `imagemin-webp` and `imagemin-gifsicle`
+- Fonts are copied from the `assets/fonts` to the `dist/fonts` folder
+
+### Pre-bundled frameworks
+- TailwindCSS
 
 ### Linters
 
