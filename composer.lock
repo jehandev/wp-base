@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b95c396828b3ab5f1dcba7f7daee3ec",
+    "content-hash": "2269f4489cd8adc654a5237286f1fcf6",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1633,15 +1633,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-mail-smtp",
-            "version": "3.8.2",
+            "version": "4.2.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
-                "reference": "tags/3.8.2"
+                "reference": "tags/4.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.3.8.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.4.2.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
