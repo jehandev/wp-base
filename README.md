@@ -1,5 +1,10 @@
 # WP-Base - jehan.dev
 
+This is a WordPress base project with Bedrock, Timber and Laravel Mix.  
+I gathered a lot of good practises over my years of freelance developer, and combined theme as a full starter pack for any WordPress project, for any developer bored by the lack of modernism in the WordPress coding styles.
+
+It IS opinionated since it was mainly built for my personal use, but I wanted to share it thinking it could help some people.
+
 ## Installation
 
 ### Requirements
