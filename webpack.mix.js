@@ -45,7 +45,7 @@ mix.webpackConfig({
                 {
                     preset: "name",
                     filename: "generated-[name][ext]",
-                    implementation: ImageMinimizerPlugin.squooshMinify,
+                    implementation: ImageMinimizerPlugin.sharpMinify,
                     // Options
                     options: {
                         encodeOptions: {
