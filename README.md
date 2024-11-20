@@ -2,11 +2,18 @@
 
 ## Installation
 
-1. `git clone git@github.com:jehandev/wp-base.git`
+### Requirements
+- PHP 8.0+
+- Composer
+- node 18.20+
+
+### Ste-by-step
+
+1. `git clone git@github.com:jehandev/wp-base.git <YOUR_PROJECT_FOLDER>`
 2. `cd` into the project
 3. `composer install`
 4. `npm install`
-5. `cp .env.example .env` and enter your variables in this new file :
+5. `cp .env.example .env`, then `nano .env` and enter/change the variables in this new file :
   - `DB_NAME`
   - `DB_USER`
   - `DB_PASSWORD`
@@ -15,7 +22,7 @@
   - `WP_HOME`
   - `WP_SITEURL`
 6. Generate Salts with [Roots App](https://roots.io/salts.html) and copy/paste them in `.env`
-7. Use this command to install WordPress (don't forget to replace the variables) : `wp core install --url=<WEBSITE_URL (be sure to include https:// if needed)> --title=<WEBSITE_TITLE> --admin_user=<USER_NAME> --admin_password=<USER_PASSWORD> --admin_email=<USER_PEMAIL>`
+7. Use this command to install WordPress (don't forget to replace the variables) : ```wp core install --url=<WEBSITE_URL (be sure to include https:// if needed)> --title=<WEBSITE_TITLE> --admin_user=<USER_NAME> --admin_password=<USER_PASSWORD> --admin_email=<USER_PEMAIL>```
 7. Activate all Plugins : `wp plugin activate --all`
 8. Remove every default posts, comments, pages : `wp site empty`
 9. Activate the default child-theme : `wp theme activate wp-base-child`
