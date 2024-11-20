@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77f4fca696d3a69bb2608dfb9f8d4c85",
+    "content-hash": "3d4e95952ee618f6c59d851b08df6e44",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -1525,15 +1525,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "5.7.7",
+            "version": "6.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/5.7.7"
+                "reference": "tags/6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.7.7.zip"
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.6.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -2379,5 +2379,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
