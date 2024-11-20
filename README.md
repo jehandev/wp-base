@@ -66,7 +66,7 @@
 
 ### Linters
 
-These linters are applied when processing files with Gulp.
+These linters are applied when processing files with Laravel Mix.
 
 #### Eslint Rules
 
