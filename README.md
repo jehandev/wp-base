@@ -15,8 +15,11 @@
   - `WP_HOME`
   - `WP_SITEURL`
 6. Generate Salts with [Roots App](https://roots.io/salts.html) and copy/paste them in `.env`
+7. Use this command to install WordPress (don't forget to replace the variables) : `wp core install --url=<WEBSITE_URL (be sure to include https:// if needed)> --title=<WEBSITE_TITLE> --admin_user=<USER_NAME> --admin_password=<USER_PASSWORD> --admin_email=<USER_PEMAIL>`
 7. Activate all Plugins : `wp plugin activate --all`
 8. Remove every default posts, comments, pages : `wp site empty`
+9. Activate the default child-theme : `wp theme activate wp-base-child`
+10. You're all set !
 
 ### Base
 - Bedrock
