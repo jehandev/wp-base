@@ -3,7 +3,7 @@
 require_once(dirname(__DIR__, 4) . '/vendor/autoload.php');
 
 // Initialize Timber.
-new Timber\Timber();
+Timber\Timber::init();
 
 new WPBase\Optimizations();
 new WPBase\Security();
