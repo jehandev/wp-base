@@ -32,7 +32,8 @@ It IS opinionated since it was mainly built for my personal use, but I wanted to
 8. Activate all Plugins : `wp plugin activate --all`
 9. Remove every default posts, comments, pages : `wp site empty`
 10. Activate the default child-theme : `wp theme activate wp-base-child`
-11. You're all set !
+11. Be sure to make your default folder point to `/web` in your server configuration, and not on the root folder or this project
+12. You're all set !
 
 ### Base
 - Bedrock
