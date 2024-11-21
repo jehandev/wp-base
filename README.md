@@ -1,6 +1,6 @@
 # WP-Base - jehan.dev
 
-This is a WordPress base project with Bedrock, Timber and Laravel Mix.  
+This is a WordPress base project with [Bedrock](https://github.com/roots/bedrock), [Timber](https://github.com/timber/timber) and [Laravel Mix](https://github.com/laravel-mix/laravel-mix).  
 I gathered a lot of good practises over my years of freelance developer, and combined theme as a full starter pack for any WordPress project, for any developer bored by the lack of modernism in the WordPress coding styles.
 
 It IS opinionated since it was mainly built for my personal use, but I wanted to share it thinking it could help some people.
@@ -12,7 +12,7 @@ It IS opinionated since it was mainly built for my personal use, but I wanted to
 - Composer
 - node 18.20+
 
-### Ste-by-step
+### Step-by-step
 
 1. `git clone git@github.com:jehandev/wp-base.git <YOUR_PROJECT_FOLDER>`
 2. `cd` into the project
