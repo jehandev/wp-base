@@ -1,3 +1,5 @@
+![WP Base logo](https://jehan.dev/app/uploads/2024/11/wp-base.jpg "WP Base logo")
+
 # WP-Base - jehan.dev
 
 This is a WordPress base project with [Bedrock](https://github.com/roots/bedrock), [Timber](https://github.com/timber/timber) and [Laravel Mix](https://github.com/laravel-mix/laravel-mix).  
