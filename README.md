@@ -79,6 +79,8 @@ It IS opinionated since it was mainly built for my personal use, but I wanted to
 
 ### Task Runner : Laravel Mix
 
+`@Todo : update to Vite instead of Mix`
+
 - Use `mix` or `mix watch` to compile assets for development
 - Use `mix --production` to compile assets for production
 
