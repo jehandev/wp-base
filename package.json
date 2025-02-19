@@ -28,7 +28,7 @@
     "postcss-import": "^16.0.0",
     "postcss-math": "^0.0.10",
     "precss": "^4.0.0",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^37.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",
