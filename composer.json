@@ -47,7 +47,7 @@
         "wpackagist-plugin/regenerate-thumbnails": "^3.1",
         "wpackagist-plugin/wps-hide-login": "^1.8",
         "wpackagist-plugin/query-monitor": "^3.6",
-        "jjgrainger/posttypes": "^2.1",
+        "jjgrainger/posttypes": "^3.0",
         "timber/timber": "^2.3"
     },
     "require-dev": {
