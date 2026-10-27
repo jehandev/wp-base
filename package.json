@@ -34,7 +34,7 @@
     "autoprefixer": "^10.3.7",
     "copy-webpack-plugin": "^12.0.0",
     "cross-env": "^7.0.3",
-    "image-minimizer-webpack-plugin": "^4.1.1",
+    "image-minimizer-webpack-plugin": "^5.0.0",
     "imagemin": "^9.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^10.0.0",
