@@ -44,7 +44,7 @@
     "laravel-mix": "^6.0.34",
     "postcss": "^8.3.11",
     "postcss-custom-properties": "^14.0.0",
-    "sharp": "^0.33.5",
+    "sharp": "^0.35.5",
     "svgo": "^4.1.0",
     "tailwindcss": "^4.0.0"
   }
