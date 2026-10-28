@@ -2,7 +2,7 @@
 
 # WP Base
 
-This is a WordPress base project with [Bedrock](https://github.com/roots/bedrock), [Timber](https://github.com/timber/timber) and [Laravel Mix](https://github.com/laravel-mix/laravel-mix).  
+This is a WordPress base project with [Bedrock](https://github.com/roots/bedrock), [Timber](https://github.com/timber/timber) and [Vite](https://vite.dev).  
 I gathered a lot of good practises over my years of freelance developer, and combined theme as a full starter pack for any WordPress project, for any developer bored by the lack of modernism in the WordPress coding styles.
 
 It IS opinionated since it was mainly built for my personal use, but I wanted to share it thinking it could help some people.
@@ -12,7 +12,7 @@ It IS opinionated since it was mainly built for my personal use, but I wanted to
 ### Requirements
 - PHP 8.0+
 - Composer
-- node 18.20+
+- node 20.19+ (or 22.12+)
 
 ### Step-by-step
 
@@ -77,26 +77,22 @@ It IS opinionated since it was mainly built for my personal use, but I wanted to
 - WPS Hide Login
 - Yoast SEO
 
-### Task Runner : Laravel Mix
+### Task Runner : Vite
 
-`@Todo : update to Vite instead of Mix`
-
-- Use `mix` or `mix watch` to compile assets for development
-- Use `mix --production` to compile assets for production
+- Use `npm run dev` or `npm run watch` to compile assets for development
+- Use `npm run build` to compile assets for production
 
 #### Details & features
 `@Todo : providing a way to import files from node_modules in css`
-- PostCSS must be located in the `assets/postcss` of the `wp-base-child` folder
-- JavaScript must be located in the `assets/js` of the `wp-base-child` folder
-- Images are processed in the `assets/js` of the `wp-base-child` folder and optimized with `imagemin`, `imagemin-mozjpeg`, `imagemin-pngquant`, `imagemin-svgo`, `imagemin-webp` and `imagemin-gifsicle`
-- Fonts are copied from the `assets/fonts` to the `dist/fonts` folder
+- PostCSS must be located in the `assets/build/postcss` of the `wp-base-child` folder, Tailwind is configured directly in `frontend.pcss`
+- JavaScript must be located in the `assets/build/js/frontend` of the `wp-base-child` folder, every file is bundled into `dist/js/frontend.js`
+- Images are copied from the `assets/build/images` to the `dist/images` folder and optimized with `sharp` and `svgo`
+- Fonts are copied from the `assets/build/fonts` to the `dist/fonts` folder
 
 ### Pre-bundled frameworks
 - TailwindCSS
 
 ### Linters
-
-These linters are applied when processing files with Laravel Mix.
 
 #### Eslint Rules
 
