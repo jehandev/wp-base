@@ -31,6 +31,7 @@
     "stylelint-config-standard": "^40.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "autoprefixer": "^10.3.7",
     "copy-webpack-plugin": "^14.0.0",
     "cross-env": "^10.1.0",

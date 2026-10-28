@@ -71,7 +71,7 @@ mix.options({
         require('precss'),
         require('postcss-math'),
         require('postcss-combine-duplicated-selectors'),
-        require('tailwindcss')
+        require('@tailwindcss/postcss')
     ]
 });
 
